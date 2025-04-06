@@ -210,7 +210,7 @@ def main():
     # --- Trainer ---
     trainer = pl.Trainer(
         accelerator=args.accelerator,
-        devices=[3],
+        devices=args.devices,
         max_epochs=args.epochs,
         logger=[tb_logger, csv_logger],
         callbacks=callbacks, # Pass the list of callbacks
